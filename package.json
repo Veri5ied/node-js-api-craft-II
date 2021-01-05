@@ -1,0 +1,20 @@
+{
+  "name": "node-js-api-craft-ii",
+  "version": "1.0.0",
+  "description": "node and express backend et zero babel",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Veri5ied/node-js-api-craft-II.git"
+  },
+  "author": "Alvin Uchenna",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Veri5ied/node-js-api-craft-II/issues"
+  },
+  "homepage": "https://github.com/Veri5ied/node-js-api-craft-II#readme"
+}
