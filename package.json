@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Veri5ied/node-js-api-craft-II/issues"
   },
-  "homepage": "https://github.com/Veri5ied/node-js-api-craft-II#readme"
+  "homepage": "https://github.com/Veri5ied/node-js-api-craft-II#readme",
+  "dependencies": {
+    "nodemon": "^2.0.6"
+  }
 }
