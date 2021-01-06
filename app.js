@@ -1,7 +1,6 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
-const { urlencoded, json } = require("body-parser");
 const cors = require("cors");
 const morgan = require("morgan");
 
@@ -23,8 +22,8 @@ mongoose
 
 app.use(cors());
 app.use(morgan());
-app.use(json());
-app.use(urlencoded({ extended: true })); 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true })); 
 
 app.use((req, res) => {
   res.send({ message: "Hello" });
