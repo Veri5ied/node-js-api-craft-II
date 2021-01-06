@@ -1,8 +1,13 @@
 const express = require("express");
+const sampleController = require("../../controllers/sample/sample.controller");
 const router = express.Router();
 
-router.route("/").get().post();
+router.route("/").get().post(sampleController.getMany);
 
-router.route("/:id").get().put().delete();
+router
+  .route("/:id")
+  .get(sampleController.getOne)
+  .put(sampleController.updateOne)
+  .delete(sampleController.deleteOne);
 
 module.exports = router;
