@@ -1,4 +1,4 @@
-const express = require("exoress");
+const express = require("express");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const { urlencoded, json } = require("body-parser");
@@ -7,11 +7,6 @@ const morgan = require("morgan");
 
 dotenv.config();
 const app = express();
-
-app.use(cors());
-app.use(morgan());
-app.use(json());
-app.use(urlencoded({ extended: true }));
 
 mongoose
   .connect(
@@ -24,5 +19,14 @@ mongoose
     console.log(error);
     console.log("Error connecting to MongoDB Atlas");
   });
+
+app.use(cors());
+app.use(morgan());
+app.use(json());
+app.use(urlencoded({ extended: true }));
+
+app.use((req, res) => {
+  res.send({ message: "Hello" });
+});
 
 module.exports = app;
