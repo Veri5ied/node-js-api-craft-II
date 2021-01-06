@@ -1,5 +1,5 @@
 const express = require("express");
-const sampleController = require("../../controllers/sample/sample.controller");
+const sampleController = require("../controllers/sample.controller");
 const router = express.Router();
 
 router.route("/").get().post(sampleController.getMany);
