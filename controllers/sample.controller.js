@@ -1,4 +1,4 @@
-const Sample = requre("../../models/sample/sample.model");
+const Sample = requre("../../models/sample.model");
 
 exports.getOne = (req, res) => {};
 exports.getMany = (req, res) => {};
