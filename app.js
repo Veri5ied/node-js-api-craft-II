@@ -10,7 +10,8 @@ const app = express();
 
 mongoose
   .connect(
-    `mongodb+srv://${process.env.db_username}:${process.env.db_password}@cluster0.ybifs.mongodb.net/${process.env.db_name}?retryWrites=true&w=majority`
+    `mongodb+srv://${process.env.db_username}:${process.env.db_password}@cluster0.ybifs.mongodb.net/${process.env.db_name}?retryWrites=true&w=majority`,
+    { useNewUrlParser: true }
   )
   .then(() => {
     console.log("Successfully connected to MongoDB Atlas");
