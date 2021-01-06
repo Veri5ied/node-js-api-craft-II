@@ -24,7 +24,7 @@ mongoose
 app.use(cors());
 app.use(morgan());
 app.use(json());
-app.use(urlencoded({ extended: true }));
+app.use(urlencoded({ extended: true })); 
 
 app.use((req, res) => {
   res.send({ message: "Hello" });
